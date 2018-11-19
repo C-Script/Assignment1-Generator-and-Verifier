@@ -22,7 +22,7 @@ transmitted_message = generator(message, g)
 print("Calling Verifier")
 
 
-# 5- Printing the output
+# 5- Putting the output
 outputFile = open("generator_output.txt", "w")
 
 outputFile.write("transmitted message: " + transmitted_message)
