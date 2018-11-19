@@ -14,6 +14,7 @@ g = input[1]
 
 # 2- Getting transmitted message from generator
 transmitted_message = generator(message, g)
+print("transmitted message: " + transmitted_message)
 
 # 3- Altering
 ## if (alter option is chosen for a bit) alter this bit ##

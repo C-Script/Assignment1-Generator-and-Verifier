@@ -1,1 +1,1 @@
-transmitted message101110000011
+transmitted message: 101110000011
