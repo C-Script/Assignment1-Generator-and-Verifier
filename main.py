@@ -1,9 +1,9 @@
 
 from generator import generator
+from verifier import verifier
 
 # 1-Taking the Input
 
-print("Calling Generator")
 inputFile = open("generator_input.txt", "r")
 
 input = inputFile.readlines()
@@ -13,17 +13,23 @@ g = input[1]
 
 
 # 2- Getting transmitted message from generator
+print("Calling Generator")
+
 transmitted_message = generator(message, g)
-print("transmitted message: " + transmitted_message)
+print("Generator output: " + transmitted_message)
 
 # 3- Altering
-## if (alter option is chosen for a bit) alter this bit ##
+## if (alter option is chosen for a bit): alter this bit ##
 
 # 4- Verifying the message through verifier
 print("Calling Verifier")
+
+verification = verifier(transmitted_message, g)
+print("Verifier output: " + verification)
 
 
 # 5- Putting the output
 outputFile = open("generator_output.txt", "w")
 
-outputFile.write("transmitted message: " + transmitted_message)
+outputFile.write("Transmitted Message: " + transmitted_message +
+                 "\n" + "Verifier Output" + verification)

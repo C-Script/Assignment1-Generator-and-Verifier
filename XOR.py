@@ -55,7 +55,7 @@ def XOR(message, G):
         message_slice = elimnating_left_zeros(message_slice)
 
         lengthOfMessage_slice = len(message_slice)
-            if (flag == 1):
+        if (flag == 1):
                 break
     while(len(message_slice) < len(G)-1):
         message_slice = "0"+message_slice
