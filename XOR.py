@@ -35,6 +35,7 @@ def XOR(message, G):
     i = 0
     message_slice = ""
     lengthOfMessage_slice = 0
+    flag = 0
 
     while(1):
         if(((i+len(G)) - lengthOfMessage_slice) <= len(message)):
@@ -42,6 +43,7 @@ def XOR(message, G):
                 message[i:((i+len(G)) - lengthOfMessage_slice)]
         else:
             message_slice = message_slice + message[i:]
+            flag = 1
         i = ((i + len(G)) - lengthOfMessage_slice)
 
         if(len(message_slice) < len(G)):
@@ -52,8 +54,9 @@ def XOR(message, G):
         # message after elimnating left zeros
         message_slice = elimnating_left_zeros(message_slice)
 
-        lengthOfMessage_slice = len(elimnating_left_zeros(message_slice))
-
+        lengthOfMessage_slice = len(message_slice)
+            if (flag == 1):
+                break
     while(len(message_slice) < len(G)-1):
         message_slice = "0"+message_slice
 
