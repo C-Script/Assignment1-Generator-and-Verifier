@@ -1,1 +1,1 @@
-# The verifier / receiver function
+### The verifier / receiver function ###
