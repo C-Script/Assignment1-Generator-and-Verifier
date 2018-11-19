@@ -1,5 +1,5 @@
 ### The generator / sender function ###
-
+from XOR import XOR
 
 # 1-Taking the Input
 
@@ -25,7 +25,8 @@ print("Generator is "+generator)
 
 
 # 3-Doing XOR between message and generator
-## calling XOR function ##
+result = XOR(message, generator)
+print("Result is "+result)
 
 
 # 4-Printing the output
