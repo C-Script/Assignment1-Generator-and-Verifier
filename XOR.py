@@ -64,8 +64,3 @@ message_slice = Adding_Left_zeros(message_slice,len(G))
 
 file = open("generator_output.txt", "w")
 file.write(message_slice)
-
-
-
-
-
