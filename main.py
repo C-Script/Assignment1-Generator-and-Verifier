@@ -20,6 +20,16 @@ print("Generator output: " + transmitted_message)
 
 # 3- Altering
 ## if (alter option is chosen for a bit): alter this bit ##
+if(alter):
+    transmitted_message = list(transmitted_message)
+    if(transmitted_message[alterBit] == "0"):
+        transmitted_message[alterBit] = "1"
+    else:
+        transmitted_message[alterBit] = "0"
+
+    transmitted_message = "".join(transmitted_message)
+
+    print("Message after altering: " + transmitted_message)
 
 # 4- Verifying the message through verifier
 print("Calling Verifier")
