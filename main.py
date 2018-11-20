@@ -5,11 +5,12 @@ from verifier import verifier
 # 1-Taking the Input
 
 inputFile = open("generator_input.txt", "r")
-
 input = inputFile.readlines()
 
 message = input[0].rstrip()
 g = input[1]
+alter = False
+alterBit = 2
 
 
 # 2- Getting transmitted message from generator
