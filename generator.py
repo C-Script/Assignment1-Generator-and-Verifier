@@ -5,14 +5,17 @@ from XOR import XOR
 def generator(message, g):
 
     # 1-Adding necessary zeros to the message
-    generatorLength = len(g)
-    appendedZerosLength = generatorLength-1
     original_message = message
+
+    appendedZerosLength = len(g)-1
+
     for x in range(appendedZerosLength):
         message = message+"0"
 
     # 2-Doing XOR between message and generator
     r = XOR(message, g)
+
+    print("Part appended to message before transmitting: " + r)
 
     transmittedMessage = original_message + r
     return transmittedMessage

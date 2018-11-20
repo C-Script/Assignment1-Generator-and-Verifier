@@ -32,4 +32,4 @@ print("Verifier output: " + verification)
 outputFile = open("generator_output.txt", "w")
 
 outputFile.write("Transmitted Message: " + transmitted_message +
-                 "\n" + "Verifier Output" + verification)
+                 "\n" + "Verifier Output: " + verification)
