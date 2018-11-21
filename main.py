@@ -41,7 +41,7 @@ def main(window):
 
     # 3-Asking the user to verify or Alter then verify
 
-    verifyButton = Button(text='Verify', bg='#EA5E3D', activebackground='#000000', fg='#FFFFFF',
+    verifyButton = Button(text='Verify the original message', bg='#EA5E3D', activebackground='#000000', fg='#FFFFFF',
                           activeforeground='#FFFFFF', font="Helvetica 20", width=30, height=1,
                           command=lambda: verify(transmitted_message),)
     verifyButton.grid(column=0, row=3)
@@ -50,11 +50,16 @@ def main(window):
                     )
     orLabel.grid(column=0, row=4)
 
-    alterButton = Button(text='Alter then verify', bg='#EA5E3D', command=lambda: Alter(transmitted_message),
+    alterButton = Button(text='Alter original message then verify', bg='#EA5E3D', command=lambda: Alter(transmitted_message),
                          activebackground='#000000', fg='#FFFFFF', activeforeground='#FFFFFF', font="Helvetica 20", width=30, height=1)
     alterButton.grid(column=0, row=5)
 
     # Defining actions for buttons:
+
+    
+    # global variable for knowing whether the message is altered or not
+    global alterState
+    alterState = False
 
     # show output
     def output(verification, transmitted_message):
@@ -93,10 +98,6 @@ def main(window):
         print("Verifier output: " + verification)
         output(verification, transmitted_message)
 
-    # global variable for knowing whether the message is altered or not
-    global alterState
-    alterState = False
-
     # 3-Alter transmitted message
 
     # Function to take index to be altered
@@ -107,8 +108,9 @@ def main(window):
 
     def Alter(transmitted_message):
         global alterState
-        alterState = True
         alterBit = takeIndex()
+        if alterBit:
+                    alterState = True
         transmitted_message = list(transmitted_message)
         if (transmitted_message[alterBit] == "0"):
             transmitted_message[alterBit] = "1"
