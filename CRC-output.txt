@@ -1,2 +1,2 @@
-Transmitted Message: 1100111001
+Transmitted Message: 101001001
 Verifier Output: Message is transmitted correctly.
