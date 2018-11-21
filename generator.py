@@ -18,4 +18,4 @@ def generator(message, g):
     print("Part appended to message before transmitting: " + r)
 
     transmittedMessage = original_message + r
-    return transmittedMessage
+    return {'transmitted_message':transmittedMessage, 'r':r}
