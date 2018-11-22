@@ -3,4 +3,6 @@ We have also implemented GUI, not only because we want a bonus, but also because
 Having a GUI makes your application easy to use.
 Who wants to look at a black screen? Who likes a console application!
 All of us have contrinuted to making this application.
-Best wishes.
+Note: When it comes to altering, we started the index with 0.
+
+Best wishes! (for you, and for us :D)
